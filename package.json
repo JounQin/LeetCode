@@ -1,0 +1,61 @@
+{
+  "name": "leet-code",
+  "version": "0.0.1",
+  "description": "personal LeetCode solutions with JavaScript for study",
+  "repository": "git@github.com:JounQin/LeetCode.git",
+  "author": "JounQin <admin@1stg.me>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --max-warnings=10",
+    "test": "jest"
+  },
+  "babel": {
+    "presets": ["@babel/env"]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "1stg",
+    "env": {
+      "jest": true
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --max-warnings=10", "git add"],
+    "*.{json,md}": ["prettier --write", "git add"]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@types/jest": "^22.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
+    "eslint": "^4.19.1",
+    "eslint-config-1stg": "^2.1.0",
+    "husky": "^1.0.0-rc.2",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.5",
+    "prettier": "^1.12.1"
+  }
+}
