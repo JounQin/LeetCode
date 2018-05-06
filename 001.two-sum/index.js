@@ -22,6 +22,7 @@ export const twoSum1 = (nums, target) => {
  */
 export const twoSum2 = (nums, target) => {
   const len = nums.length
+  /** @type {{[key:string]: number}} */
   const map = {}
   for (let i = 0; i < len; i++) {
     const curr = nums[i]
