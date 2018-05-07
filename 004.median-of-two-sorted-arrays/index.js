@@ -9,7 +9,10 @@ export const findMedianSortedArrays = function(nums1, nums2) {
 
   let i = 0
   let j = 0
-  let x, y
+  /** @type {number} x */
+  let x
+  /** @type {number} y */
+  let y
 
   for (let k = 0, len = (totalLen >> 1) + 1; k < len; k++) {
     x = y
